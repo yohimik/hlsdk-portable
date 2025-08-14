@@ -462,6 +462,9 @@ cvar_t	sk_player_leg3	= { "sk_player_leg3","1" };
 
 cvar_t sv_pushable_fixed_tick_fudge = { "sv_pushable_fixed_tick_fudge", "15" };
 cvar_t sv_busters = { "sv_busters", "0" };
+//START BOT
+cvar_t	cvar_bot = { "bot", "" };
+//END BOT
 
 // Register your console variables here
 // This gets called one time when the game is initialied
@@ -890,6 +893,9 @@ void GameDLLInit( void )
 // END REGISTER CVARS FOR SKILL LEVEL STUFF
 
 	CVAR_REGISTER( &sv_pushable_fixed_tick_fudge );
+//START BOT
+	CVAR_REGISTER( &cvar_bot );
+//END BOT
 
 	SERVER_COMMAND( "exec skill.cfg\n" );
 }

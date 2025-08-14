@@ -145,6 +145,9 @@ set (SVDLL_SOURCES
 	world.cpp
 	xen.cpp
 	zombie.cpp
+	bot/bot_combat.cpp
+	bot/bot.cpp
+	bot/botcam.cpp
 	../pm_shared/pm_debug.c
 	../pm_shared/pm_math.c
 	../pm_shared/pm_shared.c
@@ -165,7 +168,7 @@ else()
 		../external/openbsd/strlcat.c)
 endif()
 
-include_directories (. wpn_shared ../common ../engine ../pm_shared ../game_shared ../public)
+include_directories (. wpn_shared ../common ../engine ../pm_shared ../game_shared ../public bot)
 
 if(MSVC)
 	set(SVDLL_SOURCES
